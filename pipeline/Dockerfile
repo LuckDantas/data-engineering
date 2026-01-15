@@ -13,7 +13,7 @@ WORKDIR /app
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Copy application code
-COPY pipeline.py /app/pipeline.py
+COPY ingest_data.py /app/ingest_data.py
 
 # Set entrypoint
-ENTRYPOINT ["uv","run","python", "pipeline.py"]
+ENTRYPOINT ["uv","run","python", "ingest_data.py"]
